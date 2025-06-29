@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Calculator - HTML, CSS & JavaScript</title>
+    <meta name="description" content="A beautiful, responsive calculator built with HTML, CSS, and JavaScript. Features modern design, smooth animations, and full mathematical operations.">
+    <link rel="stylesheet" href="calculator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🧮</span>
+                    <span class="logo-text">Calculator Pro</span>
+                </div>
+                <nav class="nav">
+                    <a href="#calculator" class="nav-link">Calculator</a>
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#about" class="nav-link">About</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Advanced <span class="gradient-text">CALCULATOR</span>
+                    </h1>
+                    <p class="hero-description">
+                        A sophisticated calculator application featuring an interactive interface with buttons for 
+                        addition, subtraction, multiplication, and division operations. The calculator includes a 
+                        high-resolution display screen that shows user input and calculation results.
+                    </p>
+                    <p class="hero-subdescription">
+                        Built with modern CSS grid system for precise button alignments. Features advanced event 
+                        handling, mathematical operators, and efficient calculation algorithms. Designed with 
+                        professional-grade functionality and elegant user interface.
+                    </p>
+                    <div class="hero-buttons">
+                        <span class="demo-text">FOR DEMO</span>
+                        <button class="btn btn-primary" id="click-here">CLICK HERE</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="calculator-preview">
+                        <div class="preview-calculator">
+                            <div class="preview-display">Calculator Preview</div>
+                            <div class="preview-buttons">
+                                <div class="preview-btn"></div>
+                                <div class="preview-btn"></div>
+                                <div class="preview-btn"></div>
+                                <div class="preview-btn accent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <h2 class="section-title">Professional Calculator</h2>
+            <p class="section-subtitle">Advanced mathematical computation with elegant design</p>
+            
+            <div class="calculator-container">
+                <div class="calculator">
+                    <div class="calculator-header">
+                        <div class="calculator-title">Calculator Pro</div>
+                        <div class="calculator-controls">
+                            <button class="control-btn" id="minimize">−</button>
+                            <button class="control-btn" id="maximize">□</button>
+                            <button class="control-btn close" id="close">×</button>
+                        </div>
+                    </div>
+                    
+                    <div class="display-container">
+                        <div class="display">
+                            <div class="display-history" id="history"></div>
+                            <div class="display-current" id="current">0</div>
+                        </div>
+                    </div>
+                    
+                    <div class="buttons-grid">
+                        <!-- First Row -->
+                        <button class="btn-calc btn-function" data-action="clear">C</button>
+                        <button class="btn-calc btn-function" data-action="clear-entry">CE</button>
+                        <button class="btn-calc btn-function" data-action="backspace">⌫</button>
+                        <button class="btn-calc btn-operator" data-action="divide">÷</button>
+                        
+                        <!-- Second Row -->
+                        <button class="btn-calc btn-number" data-number="7">7</button>
+                        <button class="btn-calc btn-number" data-number="8">8</button>
+                        <button class="btn-calc btn-number" data-number="9">9</button>
+                        <button class="btn-calc btn-operator" data-action="multiply">×</button>
+                        
+                        <!-- Third Row -->
+                        <button class="btn-calc btn-number" data-number="4">4</button>
+                        <button class="btn-calc btn-number" data-number="5">5</button>
+                        <button class="btn-calc btn-number" data-number="6">6</button>
+                        <button class="btn-calc btn-operator" data-action="subtract">−</button>
+                        
+                        <!-- Fourth Row -->
+                        <button class="btn-calc btn-number" data-number="1">1</button>
+                        <button class="btn-calc btn-number" data-number="2">2</button>
+                        <button class="btn-calc btn-number" data-number="3">3</button>
+                        <button class="btn-calc btn-operator" data-action="add">+</button>
+                        
+                        <!-- Fifth Row -->
+                        <button class="btn-calc btn-function" data-action="toggle-sign">±</button>
+                        <button class="btn-calc btn-number" data-number="0">0</button>
+                        <button class="btn-calc btn-function" data-action="decimal">.</button>
+                        <button class="btn-calc btn-equals" data-action="equals">=</button>
+                    </div>
+                    
+                    <div class="calculator-footer">
+                        <div class="mode-toggle">
+                            <button class="mode-btn active" data-mode="basic">Basic</button>
+                            <button class="mode-btn" data-mode="scientific">Scientific</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Premium Features</h2>
+            <p class="section-subtitle">Advanced functionality and modern design</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Precise Calculations</h3>
+                    <p>Accurate mathematical operations with proper floating-point handling and error management.</p>
+                    <ul class="feature-list">
+                        <li>Addition & Subtraction</li>
+                        <li>Multiplication & Division</li>
+                        <li>Decimal support</li>
+                        <li>Error handling</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Works perfectly on desktop, tablet, and mobile devices with touch-friendly interface.</p>
+                    <ul class="feature-list">
+                        <li>Mobile-first approach</li>
+                        <li>Touch optimized</li>
+                        <li>CSS Grid layout</li>
+                        <li>Flexible sizing</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⌨️</div>
+                    <h3>Keyboard Support</h3>
+                    <p>Full keyboard support for faster calculations with intuitive key mappings.</p>
+                    <ul class="feature-list">
+                        <li>Number keys</li>
+                        <li>Operator shortcuts</li>
+                        <li>Enter for equals</li>
+                        <li>Escape to clear</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Modern Interface</h3>
+                    <p>Beautiful, clean design with smooth animations and visual feedback.</p>
+                    <ul class="feature-list">
+                        <li>Smooth animations</li>
+                        <li>Button feedback</li>
+                        <li>Color-coded buttons</li>
+                        <li>Dark/Light themes</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Smart Memory</h3>
+                    <p>Calculation history and memory functions for complex operations.</p>
+                    <ul class="feature-list">
+                        <li>Operation history</li>
+                        <li>Previous result access</li>
+                        <li>Clear functions</li>
+                        <li>Backspace support</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Performance</h3>
+                    <p>Optimized JavaScript code for instant calculations and smooth user experience.</p>
+                    <ul class="feature-list">
+                        <li>Instant calculations</li>
+                        <li>Optimized algorithms</li>
+                        <li>Minimal dependencies</li>
+                        <li>Lightweight code</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details Section -->
+    <section class="tech-details">
+        <div class="container">
+            <h2 class="section-title">Technical Excellence</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-header">
+                        <span class="tech-icon">📄</span>
+                        <h3>HTML Structure</h3>
+                    </div>
+                    <div class="code-preview">
+                        <pre><code>&lt;div class="calculator"&gt;
+  &lt;div class="display"&gt;
+    &lt;div id="current"&gt;0&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="buttons-grid"&gt;
+    &lt;button data-number="1"&gt;1&lt;/button&gt;
+    &lt;button data-action="add"&gt;+&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-header">
+                        <span class="tech-icon">🎨</span>
+                        <h3>CSS Grid Layout</h3>
+                    </div>
+                    <div class="code-preview">
+                        <pre><code>.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px;
+}
+
+.btn-calc {
+  border-radius: 12px;
+  border: none;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-header">
+                        <span class="tech-icon">⚡</span>
+                        <h3>JavaScript Logic</h3>
+                    </div>
+                    <div class="code-preview">
+                        <pre><code>function calculate(operator, a, b) {
+  switch(operator) {
+    case '+': return a + b;
+    case '-': return a - b;
+    case '*': return a * b;
+    case '/': return b !== 0 ? a / b : 'Error';
+    default: return b;
+  }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Calculator Overview</h2>
+                    <p>
+                        This advanced calculator delivers exceptional performance through optimized algorithms and 
+                        modern web technologies. The application features precision engineering and elegant design:
+                    </p>
+                    <ul class="about-list">
+                        <li>Semantic HTML architecture with accessibility compliance</li>
+                        <li>Advanced CSS Grid and Flexbox layout systems</li>
+                        <li>Dynamic CSS custom properties for theming</li>
+                        <li>High-performance JavaScript event processing</li>
+                        <li>Comprehensive error handling and input validation</li>
+                        <li>Full keyboard integration and shortcuts</li>
+                        <li>Fluid animations and micro-interactions</li>
+                    </ul>
+                    <p>
+                        The application represents cutting-edge web development standards with enterprise-level 
+                        code architecture and professional user experience design.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Lines of CSS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Lines of JavaScript</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Responsive</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🧮</span>
+                        <span class="logo-text">Calculator Pro</span>
+                    </div>
+                    <p>A sophisticated calculator application with advanced mathematical operations and premium user interface design.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul class="footer-links">
+                        <li><a href="#calculator">Professional Calculator</a></li>
+                        <li><a href="#features">Premium Features</a></li>
+                        <li><a href="#about">Application Details</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Technologies</h4>
+                    <ul class="footer-links">
+                        <li>Advanced HTML5 Architecture</li>
+                        <li>Modern CSS3 Grid System</li>
+                        <li>Optimized JavaScript Engine</li>
+                        <li>Responsive Interface Design</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Demo Actions</h4>
+                    <div class="demo-buttons">
+                        <button class="btn btn-outline" id="demo-calc">FOR DEMO</button>
+                        <button class="btn btn-primary" id="click-here-footer">CLICK HERE</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Calculator Pro. Advanced mathematical computation application.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
